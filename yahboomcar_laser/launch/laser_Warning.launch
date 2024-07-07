@@ -1,0 +1,8 @@
+<launch>
+    <!-- 启动base.launch文件 -->
+    <!-- Launch the base.launch file -->
+    <include file="$(find yahboomcar_laser)/launch/base.launch"/>
+    <!-- 启动激光雷达警卫节点 -->
+    <!-- Activate the Lidar guard node -->
+    <node name='laser_Warning' pkg="yahboomcar_laser" type="laser_Warning.py" required="true" output="screen"/>
+</launch>

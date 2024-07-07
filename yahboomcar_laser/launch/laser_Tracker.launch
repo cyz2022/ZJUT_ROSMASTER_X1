@@ -1,0 +1,8 @@
+<launch>
+    <!-- 启动base.launch文件 -->
+    <!-- Launch the base.launch file -->
+    <include file="$(find yahboomcar_laser)/launch/base.launch"/>
+    <!-- 启动激光雷达跟随节点 -->
+    <!-- Activate lidar follow node -->
+    <node name='laser_Tracker' pkg="yahboomcar_laser" type="laser_Tracker.py" required="true" output="screen"/>
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+    <!-- 启动base.launch文件 -->
+    <!-- Launch the base.launch file -->
+    <include file="$(find yahboomcar_laser)/launch/base.launch"/>
+    <!-- 启动激光雷达避障节点 -->
+    <!-- Activate lidar obstacle avoidance node -->
+    <node name='laser_Avoidance' pkg="yahboomcar_laser" type="move.py" required="true" output="screen"/>
+    <!-- 启动DFS节点 -->
+    <!-- Activate lidar obstacle avoidance node -->
+    <node name='laser_reader' pkg="yahboomcar_laser" type="DFSlib.py" required="true" output="screen"/>
+</launch>
